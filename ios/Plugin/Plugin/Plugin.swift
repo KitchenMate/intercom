@@ -151,6 +151,18 @@ public class IntercomPlugin: CAPPlugin {
     }
   }
 
+  // @objc func sendPushTokenToIntercom(_ call: CAPPluginCall) {
+  //   let token = call.getString("token")
+    
+  //   if (token != nil) {
+  //     Intercom.sendPushTokenToIntercom(token!)
+  //     call.success()
+  //     print("push token sent to intercom")
+  //   }else{
+  //     call.error("No push token found. Read intercom docs and generate it.")
+  //   }
+  // }
+
   @objc func setBottomPadding(_ call: CAPPluginCall) {
 
     if let value = call.getString("value"),

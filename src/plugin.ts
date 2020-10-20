@@ -1,4 +1,5 @@
 import { Plugins } from '@capacitor/core';
+
 import { IntercomProtocol, UserUpdateOptions } from './definitions';
 
 const { IntercomPlugin } = Plugins;
@@ -65,5 +66,9 @@ export class Intercom implements IntercomProtocol {
 
   setBottomPadding(options: { value: string }): Promise<void> {
     return IntercomPlugin.setBottomPadding(options);
+  }
+
+  sendPushTokenToIntercom(options: { token: string }): Promise<void> {
+    return IntercomPlugin.sendPushTokenToIntercom(options);
   }
 }

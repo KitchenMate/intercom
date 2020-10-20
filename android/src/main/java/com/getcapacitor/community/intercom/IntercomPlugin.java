@@ -64,6 +64,13 @@ public class IntercomPlugin extends Plugin {
     }
 
     @PluginMethod()
+    public void sendPushTokenToIntercom(PluginCall call) {
+        String token = call.getString("token");
+        IntercomPushClient intercomPushClient = new IntercomPushClient();
+        intercomPushClient.sendTokenToIntercom(this.getActivity().getApplication(), token);
+    }
+
+    @PluginMethod()
     public void updateUser(PluginCall call) {
         UserAttributes.Builder builder = new UserAttributes.Builder();
         String userId = call.getString("userId");
