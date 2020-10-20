@@ -18,6 +18,7 @@ import java.util.Map;
 import io.intercom.android.sdk.Intercom;
 import io.intercom.android.sdk.UserAttributes;
 import io.intercom.android.sdk.identity.Registration;
+import io.intercom.android.sdk.push.IntercomPushClient;
 
 @NativePlugin()
 public class IntercomPlugin extends Plugin {
